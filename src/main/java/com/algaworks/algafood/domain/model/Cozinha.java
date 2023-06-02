@@ -15,6 +15,8 @@ public class Cozinha {
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@JsonIgnore - ignorar a coluna no retorno da api
     private Long id;
+    // @JsonProperty("gastronomia") - alterar o valor da coluna no retorno da api
     private String nome;
 }
