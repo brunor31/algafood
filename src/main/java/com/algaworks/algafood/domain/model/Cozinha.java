@@ -1,9 +1,6 @@
 package com.algaworks.algafood.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,5 +15,6 @@ public class Cozinha {
     //@JsonIgnore - ignorar a coluna no retorno da api
     private Long id;
     // @JsonProperty("gastronomia") - alterar o valor da coluna no retorno da api
+    @Column(nullable = false) // usado para definir a coluna como notNull no banco
     private String nome;
 }
